@@ -44,6 +44,7 @@ class NoteController {
     func editNote(atIndex index: IndexPath, withNote note: Note) {
         noteEntriesArray.remove(at: index.row)
         noteEntriesArray.insert(note, at: index.row)
+        saveToPersistantStore()
     }
     
     // MARK: - Save to persistant store
